@@ -1,7 +1,7 @@
 ﻿
 namespace OOPTask.Models
 {
-    public class Seller : BaseEntity
+    public class Seller : BaseEntity<int>
     {
         private string nameSurname = null!;
         private string name = null!;

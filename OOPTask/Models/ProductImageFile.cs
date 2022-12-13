@@ -1,7 +1,7 @@
 ﻿
 namespace OOPTask.Models
 {
-    public class ProductImageFile
+    public class ProductImageFile : BaseEntity<int>
     {
         public string FileName { get; set; } = null!;
         public string Path { get; set; } = null!;

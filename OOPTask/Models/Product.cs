@@ -1,7 +1,7 @@
 ﻿
 namespace OOPTask.Models
 {
-    public class Product : BaseEntity
+    public class Product : BaseEntity<int>
     {
         private double price = 0.99;
         private double rate = 0;

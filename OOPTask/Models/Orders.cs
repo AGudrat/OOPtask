@@ -1,7 +1,7 @@
 ﻿
 namespace OOPTask.Models
 {
-    public class Orders : BaseEntity
+    public class Orders : BaseEntity<int>
     {
 
         public Customer Customer { get; set; } = null!;

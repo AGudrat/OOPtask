@@ -1,7 +1,7 @@
 ﻿
 namespace OOPTask.Models
 {
-    public class SupploerEmployeeInfo
+    public class SupploerEmployeeInfo : BaseEntity<int>
     {
         private string nameSurname = null!;
         private string name = null!;

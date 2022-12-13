@@ -1,7 +1,7 @@
 ﻿
 namespace OOPTask.Models
 {
-    public class OrderStatus : BaseEntity
+    public class OrderStatus : BaseEntity<int>
     {
         private string status = "Prepearing";
 

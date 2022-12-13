@@ -2,7 +2,7 @@
 
 namespace OOPTask.Models
 {
-    public class CustomerInfo : BaseEntity
+    public class CustomerInfo : BaseEntity<int>
     {
         private string nameSurname = null!;
         private string name = null!;

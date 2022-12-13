@@ -1,7 +1,7 @@
 ﻿
 namespace OOPTask.Models
 {
-    public class ProductComments : BaseEntity
+    public class ProductComments : BaseEntity<int>
     {
         private string messageContent = null!;
 

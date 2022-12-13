@@ -1,7 +1,7 @@
 ﻿
 namespace OOPTask.Models
 {
-    public class Basket : BaseEntity
+    public class Basket : BaseEntity<int>
     {
         private int basketSize;
 

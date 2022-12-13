@@ -1,7 +1,7 @@
 ﻿
 namespace OOPTask.Models
 {
-    public class Favorite : BaseEntity
+    public class Favorite : BaseEntity<int>
     {
         private int favoriteSize = 0;
 

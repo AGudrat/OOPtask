@@ -1,7 +1,7 @@
 ﻿
 namespace OOPTask.Models
 {
-    public class Customer : BaseEntity
+    public class Customer : BaseEntity<int>
     {
         private string? ıdCardNumber;
         private string? bankCard;
