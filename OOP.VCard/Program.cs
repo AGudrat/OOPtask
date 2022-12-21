@@ -1,11 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using OOP.VCard.Models;
-using System.Text.Json.Nodes;
-using static System.Net.Mime.MediaTypeNames;
-using System.IO;
-using System.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using System;
 
 public static class Program
@@ -14,7 +9,7 @@ public static class Program
     {
         List<VCard> model = new();
         var client = new HttpClient();
-        var task = client.GetAsync("https://randomuser.me/api?results=1")
+        var task = client.GetAsync("https://randomuser.me/api?results=2")
           .ContinueWith((taskwithresponse) =>
           {
               var response = taskwithresponse.Result;
@@ -31,8 +26,11 @@ public static class Program
 
         for (int i = 1; i <= model.Count; i++)
         {
-            string textFileName = $@"D:\vcard{i}.txt";
-            string vcfFileName = $@"D:\vcard{i}.vcf";
+            //Saves to C:\Users\user\Desktop\OOPTask\OOP.VCard\bin\Debug\net7.0
+
+            string path = AppDomain.CurrentDomain.BaseDirectory;
+            string textFileName = Path.Combine(path, $@"vcard{i}.txt");
+            string vcfFileName = Path.Combine(path, $@"vcard{i}.vcf");
             using (StreamWriter sw = File.CreateText(textFileName))
             {
                 sw.WriteLine("BEGIN:VCARD");
