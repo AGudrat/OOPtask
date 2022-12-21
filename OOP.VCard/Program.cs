@@ -29,8 +29,13 @@ public static class Program
             //Saves to C:\Users\user\Desktop\OOPTask\OOP.VCard\bin\Debug\net7.0
 
             string path = AppDomain.CurrentDomain.BaseDirectory;
-            string textFileName = Path.Combine(path, $@"vcard{i}.txt");
-            string vcfFileName = Path.Combine(path, $@"vcard{i}.vcf");
+            string dir = path + @"\Files";
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(path + @"\Files");
+            }
+            string textFileName = Path.Combine(path, $@"{dir}\vcard{i}.txt");
+            string vcfFileName = Path.Combine(path, $@"{dir}\vcard{i}.vcf");
             using (StreamWriter sw = File.CreateText(textFileName))
             {
                 sw.WriteLine("BEGIN:VCARD");
